@@ -139,9 +139,9 @@ class Decryption:
     def conformity_decrypt(self, encrypt_file: str, train_file: str, decrypt_file: str):
         decrypt_stream: str = self._decrypt_conformity_stream(encrypt_file, train_file)
         self._write_decrypt_stream(decrypt_file, decrypt_stream)
-        print(f'Decryption completed successfully.')
+        print(f'Decryption on dictionary conformity completed successfully.')
     
     def shift_decrypt(self, encrypt_file: str, train_file: str, decrypt_file: str):
         decrypt_stream: str = self._decrypt_shift_stream(encrypt_file, train_file)
         self._write_decrypt_stream(decrypt_file, decrypt_stream)
-        print(f'Decryption completed successfully.')
+        print(f'Decryption on predict of shift completed successfully.')

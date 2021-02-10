@@ -50,7 +50,7 @@ To run the project, you need to have Python 3.7+.
 
 * SOURCE - File path for encrypting.
 * TARGET - The path to the encrypting result file.
-* SHIFT - Shift the alphabet.
+* SHIFT - Shift the alphavite.
 
 #### Decrypt
 

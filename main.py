@@ -30,15 +30,15 @@ if __name__ == '__main__':
             decryption.conformity_decrypt(args.source_file, args.train_file, args.target_file)
             end = time.time()
             print(f'Dictionary conformity is:\n {conformity}')
-            print(f'Runtime of the encryption is {round(end - start, 2)}')
+            print(f'Runtime of the decryption is {round(end - start, 2)}')
         elif args.method == 1:
             start = time.time()
             shift: int = decryption.shift_predict(args.source_file, args.train_file)
             decryption.shift_decrypt(args.source_file, args.train_file, args.target_file)
             end = time.time()
             print(f'Predict shift is {shift}.')
-            print(f'Runtime of the encryption is {round(end - start, 2)}')
+            print(f'Runtime of the decryption is {round(end - start, 2)}')
         else:
-            raise Exception('Selected decryption type does not support.')    
+            raise Exception('Selected decryption method does not support.')    
     else:
         raise Exception('Selected type orientation does not support.')

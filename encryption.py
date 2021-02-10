@@ -35,12 +35,12 @@ class Encryption:
         
         return encrypt_stream
 
-    def _writting_output_file(self, encrypt_file: str, encrypt_stream: str):
+    def _write_encrypt_stream(self, encrypt_file: str, encrypt_stream: str):
         with open(encrypt_file, 'w', encoding=self._encoding) as fout:
             fout.write(encrypt_stream)
             fout.close()
 
     def encrypt(self, source_file: str, encrypt_file: str, shifting: int):
         encrypt_stream: str = self._compute_encrypt_stream(source_file, shifting)
-        self._writting_output_file(encrypt_file, encrypt_stream)
+        self._write_encrypt_stream(encrypt_file, encrypt_stream)
         print(f'Caesar encryption with shift {shifting} completed successfully.')
