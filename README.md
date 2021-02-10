@@ -1,4 +1,4 @@
-# Cryptographic mono-alphabetic coding and data frequency cryptanalysis
+# Cryptographic mono-alphavite coding and data frequency cryptanalysis
 
 ## Purpose
 
