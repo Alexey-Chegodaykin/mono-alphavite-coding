@@ -30,7 +30,7 @@ class Decryption:
                     continue
     
     def _frequency_chars(self, source_file: str) -> dict:
-        alphavite: List[str] = self._upper_alphavite + self._lower_alphavite
+        alphavite: List[str] = self._lower_alphavite
         count_chars: dict = {key: 0 for key in alphavite}
     
         with open(source_file, 'r', encoding=self._encoding) as fin:
@@ -38,7 +38,7 @@ class Decryption:
 
             for char in data:
                 if char in count_chars.keys():
-                    count_chars[char] += 1
+                    count_chars[char.lower()] += 1
                 else:
                     continue
         fin.close()
@@ -104,8 +104,11 @@ class Decryption:
             encrypt_data: str = fin.read()
 
             for char in encrypt_data:
-                if char in (self._upper_alphavite + self._lower_alphavite):
-                    decrypt_stream += conformity[char]
+                if char.lower() in (self._lower_alphavite):
+                    if char.isupper():
+                        decrypt_stream += conformity[char.lower()].upper()
+                    else:
+                        decrypt_stream += conformity[char]
                 else:
                     decrypt_stream += char
             
