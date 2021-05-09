@@ -27,8 +27,8 @@ Encrypted or decrypted file.
 
 1. A training file is used to form the frequency dictionary. 
 2. Decoding involves two approaches. 
-2.1 Decoding according to the conformity of the frequency dictionaries of the encoded and training files.
-2.2 Decoding using the shift predicted from the frequency dictionaries of the encoded and training files.
+   2.1 Decoding according to the conformity of the frequency dictionaries of the encoded and training files.
+   2.2 Decoding using the shift predicted from the frequency dictionaries of the encoded and training files.
 
 ## Get Started
 
